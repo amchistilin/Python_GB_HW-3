@@ -3,11 +3,10 @@
 
 n = int(input('Введите число: '))
 
-def interpretator(num):
-    res = []
-    while num != 0:
-        res.append(num % 2)
-        num //= 2
-    return res
+b = ''
 
-print(*interpretator(n), sep='')
+while n > 0:
+    b = str(n % 2) + b
+    n = n // 2
+
+print(b)

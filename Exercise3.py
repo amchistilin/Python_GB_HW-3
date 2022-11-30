@@ -6,13 +6,22 @@ def create_list(arr_list, list_length):
     for i in range(list_length):
         arr_list.append(round(uniform(0, 10), 2))
 
-def fractional_list(arr_list):
-    new_arr = []
-    for i in range(len(arr_list)):
-        new_arr.append(arr_list[i] - int(arr_list[i]))
-    return new_arr
 
-arr = []
-create_list(arr, 5)
-print(arr)
-print(max(arr) - min(arr))
+def fractional_list(arr_list):
+    new_l = []
+    for i in range(len(arr_list)):
+        new_l.append(round(arr_list[i] - int(arr_list[i]), 2))
+    return new_l
+
+l1 = []
+create_list(l1, 7)
+l2 = fractional_list(l1)
+print(l1)
+print(l2)
+print(f'Ответ: {max(l2) - min(l2)}')
+
+
+
+
+
+
